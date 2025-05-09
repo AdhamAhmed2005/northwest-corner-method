@@ -1,0 +1,211 @@
+.table-responsive {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  background-color: #2d3748;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2d3748;
+  color: #f7fafc;
+}
+
+.table th,
+.table td {
+  border: 1px solid #4a5568;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.table th {
+  background-color: #4a5568;
+}
+
+/* Table cell styling */
+.table-cell {
+  position: relative;
+  min-width: 120px;
+  height: 120px;
+}
+
+/* Corner and center input styling */
+.corner-input,
+.center-input {
+  position: absolute;
+  background-color: #4a5568;
+  color: #f7fafc;
+  border: 2px solid #718096;
+  border-radius: 6px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+}
+
+.corner-input {
+  top: 5px;
+  left: 5px;
+  width: 35%;
+  height: 35%;
+}
+
+.center-input {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: 35%;
+}
+
+/* Column and row input styling */
+.column-input,
+.row-input {
+  width: 90%;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.column-input {
+  border: 2px solid #3182ce;
+  background-color: #e9f5ff;
+  color: #2b6cb0;
+}
+
+.column-input:focus {
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+  outline: none;
+}
+
+.row-input {
+  border: 2px solid #38a169;
+  background-color: #e9f7ef;
+  color: #2f855a;
+}
+
+.row-input:focus {
+  border-color: #2f855a;
+  box-shadow: 0 0 0 3px rgba(47, 133, 90, 0.2);
+  outline: none;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* No border class */
+.no-border {
+  border: none !important;
+  background-color: transparent;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  min-height: 60px; /* Ensure container is visible */
+}
+
+/* Button styling (custom fallback) */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #38a169; /* Matches btn-success green */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block; /* Ensure button is visible */
+}
+
+.btn:hover {
+  background-color: #2f855a;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Center the solution and steps section */
+.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  text-align: center;
+  margin-top: 2rem; /* Add spacing from the top */
+}
+
+.solution-alert {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  background-color: #e9f5ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.solution-alert div {
+  margin-top: 1rem; /* Add spacing between steps */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-cell {
+    min-width: 100px;
+    height: 100px;
+  }
+
+  .corner-input,
+  .center-input {
+    width: 30%;
+    height: 30%;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-cell {
+    min-width: 80px;
+    height: 80px;
+  }
+
+  .corner-input,
+  .center-input {
+    width: 25%;
+    height: 25%;
+    font-size: 0.675rem;
+  }
+
+  .column-input,
+  .row-input {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.875rem;
+  }
+}

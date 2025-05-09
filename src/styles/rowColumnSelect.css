@@ -1,0 +1,75 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+.label {
+  font-size: 1.125rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Input field styling */
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f7fafc;
+  color: #2d3748;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+  outline: none;
+}
+
+.input::placeholder {
+  color: #a0aec0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
